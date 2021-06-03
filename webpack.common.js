@@ -45,6 +45,13 @@ module.exports = {
         test: /\.svg$/,
         type: 'asset/resource',
       },
+      {
+        test: /service\.worker\.js$/,
+        loader: 'worker-loader',
+        options: {
+          filename: '[name].js',
+        },
+      },
     ],
   },
   plugins: [
